@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    :root {
+        --primary: rgba(255, 255, 255, 0);
+        --secondary: #c4e1ff;
+    }
+
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--secondary) var(--primary);
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    *::-webkit-scrollbar-track {
+
+        background: var(--primary);
+        border-radius: 5px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);
+        width: 2px;
+        border-radius: 35px;
+    }
+}
+
+@layer components {
+
+    :root {
+        --success-clr: 40 167 69;
+        --warning-clr: 255 221 0;
+        --wide-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+        --font-family: "Ubuntu", sans-serif;
+        --font-family-2: "Montserrat", sans-serif;
+        --container-padding: 10px;
+        --flex-grid-gap: 10px;
+        --br-radius: 5px;
+        --sm-text-size: 12px;
+        --md-text-size: 16px;
+        --lg-text-size: 22px;
+        --heading-text-size: larger;
+        --inner-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    body[data-theme="dark"] {
+        --bg-clr: 24 25 26;
+        --sr-clr: 36 37 38;
+        --br-clr: 50 55 64;
+        --heading-text-clr: 235 235 235;
+        --body-text-clr: 215 215 215;
+        --primary-clr: 97 121 245;
+        --onPrimary-clr: 255 255 255;
+        --secondary-clr-1: 99 216 242;
+        --secondary-clr-2: 5 199 242;
+        --link-clr: 88 166 255;
+        --error-clr: 203 36 49;
+        --info-clr: 144 144 255;
+        --box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+        --brightness-for-icon: 0.75;
+        --filter: brightness(1) sepia(1);
+    }
+
+    body[data-theme="light"] {
+        --bg-clr: 254 255 254;
+        --sr-clr: 246 248 253;
+        --br-clr: 225 225 225;
+        --heading-text-clr: 15 15 15;
+        --body-text-clr: 32 32 32;
+        --body-text-light-clr: 75 85 99;
+        --primary-clr: 97 121 245;
+        --onPrimary-clr: 255 255 255;
+        --link-clr: 3 102 214;
+        --error-clr: 197 0 15;
+        --success-clr: 45 213 91;
+        --warning-clr: 255 196 9;
+        --box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+        --brightness-for-icon: 0.2;
+        --filter: brightness(0.3) sepia(0);
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: var(--font-family);
+        font-optical-sizing: auto;
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-family: var(--font-family);
+    }
+
+    a,
+    p,
+    h5,
+    h6,
+    span,
+    div,
+    button,
+    input,
+    select,
+    textarea,
+    option,
+    strong,
+    em,
+    b {
+        @apply text-qz_body_text_clr transition;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-family-2);
+        @apply text-qz_body_text_light_clr
+    }
+
+    .section-1-bg {
+        background-image: url('https://images.unsplash.com/photo-1650062155929-a21b9881d98b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .introduction-bg {
+        background-image: url('/public/image/introduction.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .txt-stroke-white {
+        --stroke-width: 0.5px;
+        color: transparent;
+        font-weight: bolder;
+        -webkit-text-stroke: var(--stroke-width) rgb(var(--heading-text-clr) / 50%);
+        text-stroke: var(--stroke-width) rgb(var(--heading-text-clr) / 50%)
+    }
+}

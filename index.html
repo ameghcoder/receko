@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style/output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css"
+    />
+    <title>Receko - Monetize Your Knowledge, Not Luck</title>
+    <style>
+      .glide__slide {
+        opacity: 0.2;
+      }
+      .glide__slide--active {
+        transform: scale(1.5);
+        z-index: 100;
+        opacity: 1;
+      }
+      .glide__slide--active + .glide__slide {
+        transform: scale(1.3);
+        z-index: 50;
+        opacity: 0.5;
+      }
+
+      .glide__slide:has(+ .glide__slide--active) {
+        transform: scale(1.3);
+        z-index: 50;
+        opacity: 0.5;
+      }
+      .glide__slide--active + .glide__slide + .glide__slide {
+        transform: scale(1.1);
+        z-index: 50;
+        opacity: 0.5;
+      }
+
+      .glide__slide:has(+ .glide__slide + .glide__slide--active) {
+        transform: scale(1.1);
+        z-index: 50;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body
+    class="relative bg-qz_bg_clr bg-cover bg-no-repeat min-h-screen"
+    data-theme="light"
+  >
+    <div class="w-auto mx-auto min-h-screen">
+      <div
+        class="fixed w-auto right-4 bottom-4 h-auto flex items-center justify-end z-50"
+      >
+        <header
+          class="w-auto h-auto px-2 py-4 z-50 border border-qz_border_clr rounded-full bg-qz_surface_clr/10 backdrop-blur-2xl shadow-2xl"
+        >
+          <div>
+            <div class="flex gap-4 px-2">
+              <div
+                class="aspect-square w-10 h-10 transition rounded-full border border-transparent"
+              >
+                <a
+                  href="#"
+                  class="w-10 h-10 inline-flex items-center justify-center"
+                >
+                  <img
+                    class="w-10 animate-spin-slow hover:animate-spin-fast aspect-square object-contain transition-all"
+                    src="./public/image/logo.webp"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <main class="w-full h-full min-h-screen bg-[#FFFAFA] relative">
+        <div
+          class="w-screen h-screen flex items-center justify-center fixed top-0 left-0 opacity-50"
+        >
+          <img
+            src="./public/image/logo.webp"
+            class="w-[calc(100vh/2)] h-[calc(100vh/2)] animate-spin-ultra-slow"
+            alt="receko logo"
+          />
+        </div>
+        <section class="w-screen h-full min-h-screen section-1-bg">
+          <div
+            class="p-4 md:p-8 lg:p-12 w-full h-full min-h-screen flex items-center flex-col md:flex-row justify-center bg-gradient-to-r from-black to-black/25 gap-4 backdrop-blur-md z-50"
+          >
+            <div
+              class="w-full md:w-1/2 pl-0 md:pl-8 lg:pl-12 flex items-center md:items-start flex-col gap-4"
+            >
+              <h1
+                class="text-4xl md:text-6xl lg:text-9xl font-extrabold text-white"
+              >
+                RECE<span class="text-[#ffcf01] inline-flex items-center"
+                  >K<img
+                    class="animate-spin-ultra-slow inline-flex h-28 aspect-square"
+                    src="./public/image/logo.webp"
+                    alt="app homepage mockup"
+                /></span>
+              </h1>
+              <p class="text-xl text-left md:text-2xl font-semibold text-white">
+                Monetize Your Knowledge Not Luck
+              </p>
+              <p class="text-lg text-left md:text-xl font-normal text-white/75">
+                Revolutionizing Money Making App with Cutting-Edge Technology
+              </p>
+              <div class="flex gap-4">
+                <a
+                  href="#design&more"
+                  class="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-qz_border_clr bg-[linear-gradient(110deg,#ffcf01,45%,#ffffff,55%,#ffcf01)] bg-[length:200%_100%] px-6 py-4 font-bold text-qz_body_text_clr focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:-translate-y-1 transition-all uppercase"
+                >
+                  UI Design
+                </a>
+                <a
+                  href="#founders"
+                  class="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-qz_border_clr bg-[linear-gradient(110deg,#007bff,45%,#ffffff,55%,#007bff)] bg-[length:200%_100%] px-6 py-4 font-bold text-qz_body_text_clr focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 hover:-translate-y-1 transition-all uppercase"
+                >
+                  Founders
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <img
+                class="h-full aspect-square"
+                src="./public/image/homepage-mockup.webp"
+                alt="app homepage mockup"
+              />
+            </div>
+          </div>
+        </section>
+        <hr />
+        <div id="design&more">
+          <section class="w-full h-full min-h-screen">
+            <div
+              class="w-full p-4 md:p-8 lg:p-12 h-full min-h-screen flex flex-col md:flex-row items-start justify-center md:justify-between bg-white/5 gap-8 backdrop-blur-md z-50"
+            >
+              <div class="w-full md:w-1/2 h-full relative pr-8">
+                <h2 class="text-4xl font-extrabold mt-8">UI Explanation</h2>
+                <p
+                  class="mt-4 font-normal text-qz_body_text_light_clr text-2xl"
+                >
+                  This is our app UI Design (our app is not live yet, currently
+                  we're working on App UI and strategies). Here is the
+                  explanation of the three UI images:
+                </p>
+
+                <div class="mt-4">
+                  <strong class="font-medium text-2xl"
+                    >Homepage UI Design (mark as 1) :
+                  </strong>
+                  <ul class="list-inside list-disc text-justify">
+                    <li class="text-lg">
+                      In the homepage image (that mark as 1), you can see five
+                      components Header, Footer, Banner, Top Users, Ongoing
+                      Plays.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Header</strong> contains the hamburger, logo and
+                      search icon. Hamburger opens the slider that contains many
+                      links to easily navigate with the UI.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Footer</strong> contains the four links of four
+                      main pages that as follows Homepage, Leaderboard, Games,
+                      Profile.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Banner</strong> section contains the latest and
+                      upcoming events like Weekly test series and some sponsored
+                      banners.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Top Users</strong> section contains our top
+                      active, winners and top player by their performance.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Ongoing Plays</strong> section contains the plays
+                      that are available to play. These banners contains all
+                      information like specific field/subject, winning amount,
+                      entry fees, duration, total questions etc.
+                    </li>
+                    <li class="text-lg">
+                      If the user not found their specific subject/field plays,
+                      they can also post on our platform.
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-4">
+                  <strong class="font-medium text-2xl"
+                    >Leaderboard UI Design (mark as 2) :
+                  </strong>
+                  <ul class="list-inside list-disc text-justify">
+                    <li class="text-lg">
+                      In the leaderboard UI image (that mark as 2), you can see
+                      components like Header, Top Players.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Top Players</strong> contains the Top players info
+                      based on This week/ This month.
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-4">
+                  <strong class="font-medium text-2xl"
+                    >Profile UI Design (mark as 3) :
+                  </strong>
+                  <ul class="list-inside list-disc text-justify">
+                    <li class="text-lg">
+                      In the profile image (that mark as 3), you can see many
+                      components like User Info, My Stats, Setting, Withdraw.
+                    </li>
+                    <li class="text-lg">
+                      <strong>User Info</strong> contains the user info like
+                      user profile, image, current rank, total wallet amount,
+                      total plays, total wins, global rank.
+                    </li>
+                    <li class="text-lg">
+                      <strong>My Stats</strong> contains complete statistics
+                      about user and their plays.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Setting</strong> section contains the user
+                      personal info and some other settings to change.
+                    </li>
+                    <li class="text-lg">
+                      <strong>Withdraw</strong> section contains the payment
+                      method to withdraw money directly in their account.
+                    </li>
+                  </ul>
+                </div>
+                <span
+                  class="h-[50vh] bg-[linear-gradient(182deg,transparent,25%,#007bff,75%,transparent)] w-[1px] absolute top-1/4 right-0"
+                ></span>
+              </div>
+              <div class="w-full md:w-1/2 h-full flex sticky top-8">
+                <div
+                  class="w-full h-full min-h-screen flex items-center justify-end relative"
+                  id="image-container"
+                  data-1-class="z-50 right-0"
+                  data-2-class="z-20 right-[calc(100%-var(--calcs-for-second-ele))] scale-75 opacity-75"
+                  data-3-class="z-10 right-1/3 scale-50 opacity-50"
+                >
+                  <div
+                    data-image="1"
+                    style="transition-duration: 1s"
+                    class="slide_images rounded-3xl shadow-2xl border border-qz_border_clr z-50 absolute right-0 transition-all overflow-hidden"
+                  >
+                    <strong
+                      class="absolute bottom-0 right-10 text-8xl opacity-70 text-qz_border_clr shadow-xl"
+                    >
+                      1
+                    </strong>
+                    <img
+                      src="./public/image/HomePage.avif"
+                      alt="Homepage UI Design"
+                    />
+                  </div>
+                  <div
+                    class="slide_images rounded-3xl shadow-2xl border border-qz_border_clr z-20 absolute right-[calc(100%-var(--calcs-for-second-ele))] scale-75 opacity-75 transition-all"
+                    data-image="2"
+                    style="transition-duration: 1s"
+                  >
+                    <strong
+                      class="absolute bottom-0 right-10 text-8xl opacity-70 text-qz_border_clr shadow-xl"
+                    >
+                      2
+                    </strong>
+                    <img
+                      src="./public/image/LeaderBoard.avif"
+                      alt="Leaderboard UI Design"
+                    />
+                  </div>
+                  <div
+                    class="slide_images rounded-3xl shadow-2xl border border-qz_border_clr z-10 absolute right-1/3 scale-50 opacity-50 transition-all"
+                    data-image="3"
+                    style="transition-duration: 1s"
+                  >
+                    <strong
+                      class="absolute bottom-0 left-10 text-8xl opacity-70 text-qz_border_clr shadow-xl"
+                    >
+                      3
+                    </strong>
+                    <img
+                      src="./public/image/Profile.avif"
+                      alt="Profile UI Design"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section class="w-full h-full min-h-screen">
+            <div
+              class="w-full p-4 md:p-8 lg:p-12 h-full min-h-screen bg-white/5 gap-8 backdrop-blur-md z-50"
+            >
+              <div class="glide w-full max-w-7xl h-full mx-auto">
+                <div
+                  class="glide__track overflow-x-hidden h-full"
+                  data-glide-el="track"
+                >
+                  <ul
+                    class="glide__slides flex h-full items-center min-h-screen"
+                  >
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/HomePage.avif"
+                          alt="HomePage"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Homepage UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/LeaderBoard.avif"
+                          alt="leaderboard"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Leaderboard UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/Games.avif"
+                          alt="games ui"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Games UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/Profile.avif"
+                          alt="profile"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Profile UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/profile-settings.avif"
+                          alt="profile setting"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Profile Setting UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/profile-payment.avif"
+                          alt="withdraw payment"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Withdraw Payment UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/congratulation-screen.webp"
+                          alt="congratulation screen"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Congratulation UI</strong
+                        >
+                      </span>
+                    </li>
+                    <li
+                      class="glide__slide transition-all inline-flex items-center justify-center w-full max-w-xs p-4 border border-gray-100 bg-white/50 backdrop-blur-lg rounded-xl select-none"
+                    >
+                      <span
+                        class="inline-flex flex-col items-center gap-4 transition-all"
+                      >
+                        <img
+                          src="/public/image/playground.avif"
+                          alt="playground"
+                          class="transition-all rounded-3xl"
+                        />
+                        <strong
+                          class="transition-all font-normal text-xs px-4 py-2 border border-gray-100 shadow-lg bg-white/50 backdrop-blur-lg rounded-xl"
+                          >Playground UI</strong
+                        >
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section class="w-full h-full min-h-screen">
+            <div
+              class="p-4 md:p-8 lg:p-12 w-full h-full min-h-screen flex items-center flex-col md:flex-row justify-center bg-white/5 gap-4 backdrop-blur-md z-50"
+            >
+              <div
+                class="w-full flex items-center justify-center max-w-7xl m-auto min-h-[80vh]"
+              >
+                <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  <div
+                    class="relative border border-qz_border_clr rounded-xl pt-4 px-4 pb-12 bg-white/5 backdrop-blur-2xl overflow-hidden"
+                  >
+                    <div>
+                      <img
+                        src="./public/image/fo.jpg"
+                        class="w-full max-w-xs aspect-square rounded-full border-2 border-qz_border_clr shadow-xl mx-auto"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <strong
+                        class="uppercase absolute text-4xl opacity-50 bottom-0 -left-1 leading-6"
+                        >Yashraj Yadav</strong
+                      >
+                      <p class="text-xl opacity-75">
+                        <strong>Eduction : 12th (pass out)</strong>
+                      </p>
+                      <p class="text-lg max-w-md text-center">
+                        I’m a creative developer who uses technical skills to
+                        solve problems. I aim for creativity over perfection,
+                        knowing that there’s always room for improvement.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="border border-qz_border_clr rounded-xl p-4 bg-white/5 pb-12 backdrop-blur-2xl relative overflow-hidden"
+                  >
+                    <div>
+                      <img
+                        src="./public/image/cfo.jpg"
+                        class="w-full max-w-xs aspect-square rounded-full border-2 border-qz_border_clr shadow-xl mx-auto"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <strong
+                        class="uppercase absolute text-4xl opacity-50 bottom-0 -left-1 leading-6"
+                        >Ankit Yadav</strong
+                      >
+                      <p class="text-xl opacity-75">
+                        <strong>Eduction : 12th (pass out)</strong>
+                      </p>
+                      <p class="text-lg max-w-md text-center">
+                        I’m a creative thinker who likes to figure out if
+                        there’s a real problem. I’m good at managing people and
+                        understanding their views, always looking for the best
+                        way forward.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section class="w-full h-full min-h-screen">
+            <div
+              class="w-full h-full min-h-screen flex items-center flex-col md:flex-row justify-center bg-white/5 gap-4 backdrop-blur-md z-50"
+            >
+              <!-- <iframe
+                class="w-full h-full min-h-screen"
+                src="./public/Receko-Presentation.pdf"
+                frameborder="0"
+                aria-controls="false"
+              ></iframe> -->
+              <iframe
+                src="https://docs.google.com/viewer?url=http://127.0.0.1:5501/public/Receko-Presentation.pdf"
+                width="100%"
+                height="600px"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./public/script/script_v1.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@glidejs/glide@3.6.2/dist/glide.js"
+    ></script>
+    <script type="text/javascript">
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      // glide js
+      new Glide(".glide", {
+        type: "carousel",
+        startAt: 0,
+        perView: 5,
+        animationDuration: 500,
+        keyboard: true,
+        autoplay: 1500,
+        focusAt: "center",
+        breakpoints: {
+          1024: {
+            perView: 3,
+          },
+          600: {
+            perView: 2,
+          },
+        },
+      }).mount();
+    </script>
+  </body>
+</html>

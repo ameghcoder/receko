@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loader {
+        margin-left: auto;
+        margin-right: auto;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 9999px;
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+          0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+
+      .loader > .spinner {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-width: 1px;
+        border-radius: 9999px;
+        border-top-width: 4px;
+        border-style: solid;
+        --tw-border-opacity: 1;
+        border-color: rgb(128 187 255 / var(--tw-border-opacity));
+        --tw-bg-opacity: 1;
+        background-color: rgb(36 37 38 / var(--tw-bg-opacity));
+        transition: transform 0.5s ease;
+        animation: spinner 1s infinite forwards;
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader gallery-loader" role="status">
+      <div class="spinner"></div>
+    </div>
+  </body>
+</html>
+
+// Button code
+<button
+  className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+>
+  Shimmer
+</button>
+
+// tailwind.config.js code { "animation": { shimmer: "shimmer 2s linear
+infinite" }, "keyframes": { shimmer: { from: { "backgroundPosition": "0 0" },
+to: { "backgroundPosition": "-200% 0" } } } }
